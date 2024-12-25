@@ -1,16 +1,121 @@
 @font-face {
     font-family: 'norsebold';
     src: url('norse-bold-webfont.woff2') format('woff2'),
-         url('norse-bold-webfont.woff') format('woff');
+        url('norse-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
 
-div {
-    font-family: 'norsebold';
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
-div:hover {
-    background-color: goldenrod;
+* {
+    margin: 0;
 }
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+p {
+    text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+label {
+    font-family: monospace;
+    font-size: 12px;
+}
+
+input {
+    border: 1px inset #E5E7EB;
+    border-radius: 2.5px;
+    width: 220px;
+}
+
+form {
+    padding: 1.5rem 2rem;
+    box-shadow:
+      0 1px 1px hsl(0deg 0% 0% / 0.075),
+      0 2px 2px hsl(0deg 0% 0% / 0.075),
+      0 4px 4px hsl(0deg 0% 0% / 0.075),
+      0 8px 8px hsl(0deg 0% 0% / 0.075),
+      0 16px 16px hsl(0deg 0% 0% / 0.075)
+    ;
+}
+
+h1 {
+    margin-bottom: 1rem;
+}
+
+fieldset {
+    border: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem 4rem;
+    width: 60%;
+    padding: 0;
+}
+
+.labelInput {
+    display: flex;
+    flex-direction: column;
+}
+
+input:invalid {
+    border: 1px solid red;
+}
+
+input:focus {
+    outline: 1px solid blue;
+    box-shadow: 0.5px 1px 1px hsl(220deg 60% 50% / 0.7);
+}       
